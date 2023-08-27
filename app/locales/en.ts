@@ -339,8 +339,8 @@ const en: LocaleType = {
   NewChat: {
     Return: "Return",
     Skip: "Just Start",
-    Title: "Pick a Mask",
-    SubTitle: "Chat with the Soul behind the Mask",
+    Title: "Pick a Role",
+    SubTitle: "Role Based Prompts for ChatGPT (Act as a ...)",
     More: "Find More",
     NotShow: "Never Show Again",
     ConfirmNoShow: "Confirm to disable？You can enable it in settings later.",
