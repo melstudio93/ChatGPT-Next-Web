@@ -9,12 +9,15 @@ import ChatGptIcon from "../icons/chatgpt.svg";
 //import ChatGptIcon from "../icons/MJ.jpg";
 import AddIcon from "../icons/add.svg";
 import CloseIcon from "../icons/close.svg";
-import MaskIcon from "../icons/mask.svg";
+//import MaskIcon from "../icons/mask.svg";
+import MaskIcon from "../icons/se.svg";
 import PluginIcon from "../icons/plugin.svg";
 import DragIcon from "../icons/drag.svg";
 import DiliIcon from "../icons/Bilibili.svg";
 import MJIcon from "../icons/MBIL.svg";
 import Locale from "../locales";
+
+
 
 import { useAppConfig, useChatStore } from "../store";
 
@@ -133,21 +136,25 @@ export function SideBar(props: { className?: string }) {
         </div>
       </div>
 
-      <div className={styles["sidebar-header-bar"]}>
+      <div className={styles["sidebar-header-bar"]+ " no-dark"}>
         <IconButton
           icon={<MaskIcon />}
-          text={shouldNarrow ? undefined : Locale.Mask.Name}
-          className={styles["sidebar-bar-button"] + " no-dark"}
+          //text={shouldNarrow ? undefined : Locale.Mask.Name}
+          text={"Role"}
+          className={styles["sidebar-bar-button"] }
           onClick={() => navigate(Path.NewChat, { state: { fromHome: true } })}
-          shadow
+          //shadow
         />
+        <a href={"https://cloud.majorbio.com"} target="_blank">
         <IconButton
           icon={<PluginIcon />}
-          text={shouldNarrow ? undefined : Locale.Plugin.Name}
-          className={styles["sidebar-bar-button"]+ " no-dark"}
-          onClick={() => showToast(Locale.WIP)}
-          shadow
+          //text={shouldNarrow ? undefined : Locale.Plugin.Name}
+          text={"MajorBio Cloud"}
+          className={styles["sidebar-bar-button"]}
+          //onClick={() => showToast(Locale.WIP)}
+          //shadow
         />
+        </a>
       </div>
 
       <div
